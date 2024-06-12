@@ -25,13 +25,13 @@ export default {
           id: 1,
           name: 'Producto 1',
           price: '$100',
-          image: 'https://via.placeholder.com/150'
+          image: ('public/icons/favicon-16x16.png')
         },
         {
           id: 2,
           name: 'Producto 2',
           price: '$200',
-          image: 'https://via.placeholder.com/150'
+          image: 'public/icons/favicon-128x128.png'
         },
         // Agrega más productos según sea necesario
       ]
