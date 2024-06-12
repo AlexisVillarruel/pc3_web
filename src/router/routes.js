@@ -7,6 +7,11 @@ const routes = [
     ]
   },
 
+  {
+    path: '/ProductsPage',
+    component: () => import('components/Auth/ProductCard.vue'),
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {
