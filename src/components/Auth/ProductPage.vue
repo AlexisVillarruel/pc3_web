@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Product from '@/components/auth/Product.vue'; // Ruta al componente Product.vue
+import Product from '@/components/auth/Product.vue';
 
 export default {
   components: {

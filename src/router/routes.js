@@ -1,4 +1,5 @@
 import Loging from "src/components/Auth/Loging.vue";
+import ProductPage from "src/components/Auth/ProductPage"
 
 const routes = [
   {
@@ -11,6 +12,12 @@ const routes = [
     path: "/Loging",
     component: () => import("components/Auth/Loging.vue"),
   },
+
+  {
+    path: "/ProductPage",
+    component: () => import("components/Auth/ProductPage.vue"),
+  },
+
 
   // Always leave this as last one,
   // but you can also remove it
