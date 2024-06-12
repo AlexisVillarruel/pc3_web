@@ -1,18 +1,24 @@
 <template>
-  <div class="product-card">
-    <img :src="product.image" alt="Product Image" class="product-image">
-    <div class="product-info">
-      <h2>{{ product.name }}</h2>
-      <p>{{ product.price }}</p>
-    </div>
+  <div class="product">
+    <img :src="imagen" alt="Producto">
+    <h3>{{ nombre }}</h3>
+    <p>Precio: ${{ precio }}</p>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    product: {
-      type: Object,
+    precio: {
+      type: Number,
+      required: true
+    },
+    nombre: {
+      type: String,
+      required: true
+    },
+    imagen: {
+      type: String,
       required: true
     }
   }
@@ -20,21 +26,13 @@ export default {
 </script>
 
 <style scoped>
-.product-card {
+.product {
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
-
-.product-image {
-  width: 100%;
+.product img {
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
-}
-
-.product-info {
-  text-align: center;
 }
 </style>
