@@ -1,5 +1,5 @@
 import Loging from "src/components/Auth/Loging.vue";
-import ProductPage from "src/components/Auth/ProductPage"
+import Product from "components/Auth/Product.vue";
 
 const routes = [
   {
@@ -14,10 +14,9 @@ const routes = [
   },
 
   {
-    path: "/ProductPage",
-    component: () => import("components/Auth/ProductPage.vue"),
+    path: "/Product",
+    component: () => import("components/Auth/Product.vue"),
   },
-
 
   // Always leave this as last one,
   // but you can also remove it
