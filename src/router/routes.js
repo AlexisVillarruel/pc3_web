@@ -8,10 +8,6 @@ const routes = [
   },
 
   {
-    path: "/ProductsPage",
-    component: () => import("components/Auth/ProductCard.vue"),
-  },
-  {
     path: "/Loging",
     component: () => import("components/Auth/Loging.vue"),
   },
