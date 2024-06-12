@@ -1,8 +1,10 @@
 <template>
   <div class="product-card">
-    <img :src="product.image" alt="Product Image" class="product-image"/>
-    <h2 class="product-name">{{ product.name }}</h2>
-    <p class="product-price">{{ product.price }}</p>
+    <img :src="product.image" alt="Product Image" class="product-image">
+    <div class="product-info">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.price }}</p>
+    </div>
   </div>
 </template>
 
@@ -14,31 +16,25 @@ export default {
       required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .product-card {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  width: 200px;
 }
 
 .product-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
-.product-name {
-  font-size: 1.25em;
-  margin: 0.5em 0;
-}
-
-.product-price {
-  color: #007BFF;
-  font-size: 1.1em;
+.product-info {
+  text-align: center;
 }
 </style>

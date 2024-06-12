@@ -1,12 +1,8 @@
 <template>
-  <div class="products-page">
-    <h1>Productos</h1>
-    <div class="products-grid">
-      <ProductCard
-        v-for="product in products"
-        :key="product.id"
-        :product="product"
-      />
+  <div class="product-page">
+    <h1>Productos en Venta</h1>
+    <div class="product-list">
+      <product-card v-for="product in products" :key="product.id" :product="product" />
     </div>
   </div>
 </template>
@@ -21,33 +17,23 @@ export default {
   data() {
     return {
       products: [
-        {
-          id: 1,
-          name: 'Producto 1',
-          price: '$100',
-          image: ('public/icons/favicon-16x16.png')
-        },
-        {
-          id: 2,
-          name: 'Producto 2',
-          price: '$200',
-          image: 'public/icons/favicon-128x128.png'
-        },
-        // Agrega más productos según sea necesario
+        { id: 1, name: 'Producto 1', price: '$10', image: 'public/icons/lapicero.jpg' },
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-.products-page {
-  padding: 16px;
+.product-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.products-grid {
+.product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  justify-content: space-around;
 }
 </style>
